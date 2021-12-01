@@ -15,12 +15,12 @@ if __name__ == '__main__':
     options.add_argument('--user-data-dir='+CHROME_PROFILE_PATH)
     options.add_argument('--profile-directory=Default')
 
-    delay = 3
+    delay = 30
     
     service = Service('./chromedriver.exe')
     chrome_browser = webdriver.Chrome(service=service, options=options)
     
-    data = pd.read_excel(filepath = EXCEL_PATH, engine='openpyxl', sheet_name=SHEETS)[CURRENT_SHEET]
+    data = pd.read_excel(EXCEL_PATH, engine='openpyxl', sheet_name=SHEETS)[CURRENT_SHEET]
     chrome_browser.get('https://web.whatsapp.com')
 
     try:
