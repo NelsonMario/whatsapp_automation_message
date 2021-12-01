@@ -15,7 +15,7 @@ if __name__ == '__main__':
     options.add_argument('--user-data-dir='+CHROME_PROFILE_PATH)
     options.add_argument('--profile-directory=Default')
 
-    delay = 30
+    delay = 15
     
     service = Service('./chromedriver.exe')
     chrome_browser = webdriver.Chrome(service=service, options=options)
